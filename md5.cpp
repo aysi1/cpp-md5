@@ -96,7 +96,7 @@ class MD5 {
 		    h1+=b;
 		    h2+=c;
 		    h3+=d;
-            pos++;
+            	    pos++;
         }
 };
 
@@ -162,10 +162,10 @@ void MD5::Final() {
     }
     __digest = new uint8_t[16];
     memset(__digest, 0, 16);
-	memcpy(__digest, &h0, sizeof(uint32_t));
-	memcpy(__digest+4, &h1, sizeof(uint32_t));
-	memcpy(__digest+8, &h2, sizeof(uint32_t));
-	memcpy(__digest+12, &h3, sizeof(uint32_t));
+    memcpy(__digest, &h0, sizeof(uint32_t));
+    memcpy(__digest+4, &h1, sizeof(uint32_t));
+    memcpy(__digest+8, &h2, sizeof(uint32_t));
+    memcpy(__digest+12, &h3, sizeof(uint32_t));
     __hex_digest = new char[33];
     __hex_digest[32]=0;
     for (int i=0; i<16; i++)
