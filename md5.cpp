@@ -64,8 +64,8 @@ class MD5 {
             return ((x << n) | (x >> (32 - n)));
         }
         void apply_md5_on_block() {
-            w = (uint32_t *) (msg + 64 * pos);
-            a=h0;
+            	    w = (uint32_t *) (msg + 64 * pos);
+            	    a=h0;
 		    b=h1;
 		    c=h2;
 		    d=h3;
@@ -127,8 +127,8 @@ void MD5::Final() {
     fmsg[sz1]=128;
     memcpy(fmsg+sz2, &__rsize, sizeof(uint64_t));
     for (int j=0; j<(sz2+8)/64; j++) {
-            w = (uint32_t *) (fmsg + 64 * j);
-            a=h0;
+                    w = (uint32_t *) (fmsg + 64 * j);
+                    a=h0;
 		    b=h1;
 		    c=h2;
 		    d=h3;
