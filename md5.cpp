@@ -69,7 +69,7 @@ class MD5 {
 		    b=h1;
 		    c=h2;
 		    d=h3;
-		    for (i=0; i<64; i++) {
+		    for (int i=0; i<64; i++) {
 			    if (i<16) {
 				    f=(b & c) | ((~b) & d);
 				    g=i;
@@ -132,7 +132,7 @@ void MD5::Final() {
 		    b=h1;
 		    c=h2;
 		    d=h3;
-		    for (i=0; i<64; i++) {
+		    for (int i=0; i<64; i++) {
 			    if (i<16) {
 				    f=(b & c) | ((~b) & d);
 				    g=i;
